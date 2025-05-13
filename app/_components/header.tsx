@@ -7,7 +7,7 @@ const Header = () => {
   return (
     <header className="w-full z-50 bg-slate-100 fixed top-0 h-16 border-b shadow-md border-zinc-200 p-5 flex items-center justify-between">
       <div className="font-[family-name:var(--font-PlaywriteDKLoopet-Regular)]">
-        <Link className="text-sm text-zinc-400" href={'/'}>
+        <Link className="text-sm text-emerald-500" href={'/'}>
           Achadinhos.com
         </Link>
       </div>

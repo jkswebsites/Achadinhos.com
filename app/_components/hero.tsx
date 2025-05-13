@@ -3,14 +3,14 @@ import imgLampada from '@/app/assets/images/eletronics/lampada-camera.png';
 import Image from 'next/image';
 const Hero = () => {
   return (
-    <div className=" flex shadow-md gap-x-4 items-center  rounded-lg sm:w-[600px] mx-auto h-52 bg-emerald-300 overflow-hidden">
-      <div className="w-40 overflow-hidden -ml-10 h-40 bg-neutral-100 rounded-full">
+    <div className=" flex shadow-md gap-x-4 items-center  rounded-lg sm:w-[600px] lg:w-[900px] lg:ml-5 mx-auto h-52 bg-emerald-300 overflow-hidden">
+      <div className="w-40 -ml-10 shadow-lg h-40 bg-gray-100  rounded-full">
         <Image
           src={imgLampada}
           alt="camera de segurança"
           width={110}
           height={110}
-          className="ml-8 block -mt-3 object-contain drop-shadow-xl"
+          className="ml-8 scale-125 block -mt-3 object-contain drop-shadow-xl"
         />
       </div>
 
