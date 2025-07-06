@@ -10,10 +10,7 @@ export interface CatalogProducts {
   price: number;
   type: string;
   description: string;
-  descont?: {
-    off: boolean;
-    price: number;
-  };
+  discountPercentage: number;
   styles: string;
 }
 
@@ -22,6 +19,7 @@ export const catalogProducts: CatalogProducts[] = [
     name: 'Camera de Segurança',
     img: imgLampada,
     price: 59.99,
+    discountPercentage: 0,
     type: 'eletronico',
     description:
       'Camera de Segurança, com sensor de movimento e acompanhamento remoto',
@@ -31,6 +29,7 @@ export const catalogProducts: CatalogProducts[] = [
     name: 'SmartWatch',
     img: imgSmartWatch,
     price: 199.99,
+    discountPercentage: 0,
     type: 'eletronico',
     description: 'SmartWatch com monitoramento cardiaco',
     styles: 'mt-[50px] scale-150 hover:scale-[1.8]',
@@ -39,6 +38,7 @@ export const catalogProducts: CatalogProducts[] = [
     name: 'Base Boca Rosa',
     img: imgBoca,
     price: 39.99,
+    discountPercentage: 0,
     type: 'make',
     description: 'SmartWatch com monitoramento cardiaco',
     styles: 'mt-[40px] scale-150 hover:scale-[1.8]',
@@ -47,6 +47,7 @@ export const catalogProducts: CatalogProducts[] = [
     name: 'Amolador de Facas',
     img: imgKnife,
     price: 15.99,
+    discountPercentage: 0,
     type: 'kitchen',
     description: 'SmartWatch com monitoramento cardiaco',
     styles: 'mt-[70px] scale-150 hover:scale-[1.8]',

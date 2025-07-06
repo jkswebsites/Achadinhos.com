@@ -1,4 +1,5 @@
 {
   "singleQuote": true,
-  "dot-notation": true
+  "dot-notation": true,
+  "tabWidth": 2
 }
