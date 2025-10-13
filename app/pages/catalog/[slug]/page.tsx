@@ -1,7 +1,10 @@
 import { catalogProducts } from '@/app/constants/catalog-products';
-import Image from 'next/image';
 import { notFound } from 'next/navigation';
 import React from 'react';
+import ShowImage from './_components/show-image';
+
+import ButtonShare from '@/app/_components/button-share';
+
 interface CatalogPageProps {
   params: {
     slug: string;
@@ -15,18 +18,18 @@ export default function CatalogPage({ params }: CatalogPageProps) {
 
   return (
     <div className="p-6">
-      <div className="flex gap-2">
-        <div className="w-4/5 h-[400px]">
-          <Image
-            src={product.img}
-            alt={product.name}
-            width={250}
-            height={250}
-            quality={100}
-            className="drop-shadow-2xl hover:scale-110 cursor-zoom-in"
-          />
-        </div>
-        <div className="w-[90px] h-[400px] bg-red-400"></div>
+      <ShowImage img={product.img} title={product.name} />
+
+      <div>
+        <h2 className="text-2xl font-bold font-subtitle">{product.name}</h2>
+        <h3 className="text-neutral-400 text-lg -mt-3">{product.brand}</h3>
+        <span className="text-2xl font-subtitle text-neutral-700 block w-[200px] my-3">
+          {product.price}
+        </span>
+        <p className="mt-4 italic text-neutral-500 tracking-wide">
+          {product.description}
+        </p>
+        <ButtonShare {...product} />
       </div>
     </div>
   );
