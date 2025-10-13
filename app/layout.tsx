@@ -1,25 +1,23 @@
 import type { Metadata } from 'next';
-import localFont from 'next/font/local';
-
+import { Roboto, Oxygen, Poppins } from 'next/font/google';
 import './globals.css';
 import Header from './_components/header';
 
-const playwriteDKLoopetExtraLight = localFont({
-  src: './fonts/PlaywriteDKLoopet-ExtraLight.ttf',
-  variable: '--font-PlaywriteDKLoopet-ExtraLight',
-  weight: '100 900',
+const roboto = Roboto({
+  subsets: ['latin'],
+  weight: ['100', '400', '900'],
+  variable: '--font-roboto',
 });
-const playwriteDKLoopetRegular = localFont({
-  src: './fonts/PlaywriteDKLoopet-Regular.ttf',
-  variable: '--font-PlaywriteDKLoopet-Regular',
-  weight: '100 900',
+const oxygen = Oxygen({
+  subsets: ['latin'],
+  weight: ['300', '400', '700'],
+  variable: '--font-oxygen',
 });
-const playwriteDKLoopetThin = localFont({
-  src: './fonts/PlaywriteDKLoopet-Thin.ttf',
-  variable: '--font-PlaywriteDKLoopet-Thin',
-  weight: '100 900',
+const poppins = Poppins({
+  subsets: ['latin'],
+  weight: ['100', '500', '800', '900'],
+  variable: '--font-poppins',
 });
-
 export const metadata: Metadata = {
   title: 'Home | Achadinhos.com',
   description: 'Variedades de diversos produtos para sua casa.',
@@ -33,10 +31,10 @@ export default function RootLayout({
   return (
     <html lang="pt-BR">
       <body
-        className={`${playwriteDKLoopetExtraLight.variable} ${playwriteDKLoopetThin.variable} ${playwriteDKLoopetRegular.variable} antialiased`}
+        className={`${roboto.variable} ${oxygen.variable} ${poppins.variable} antialiased`}
       >
         <Header />
-        {children}
+        <div className="mt-[100px] sm:w-[650px]">{children}</div>
       </body>
     </html>
   );
