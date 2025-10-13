@@ -32,7 +32,7 @@ const HeroCarousel = ({ catalogProducts }: CatalogProductsPorps) => {
           >
             <Image
               src={item.img}
-              alt={item.title}
+              alt={item.name}
               height={120}
               width={120}
               className="scale-105"
