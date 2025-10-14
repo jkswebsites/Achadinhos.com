@@ -6,11 +6,15 @@ import { CatalogProducts } from '../constants/catalog-products';
 
 export default function ButtonShare({ name, brand }: CatalogProducts) {
   const handleShareClick = async () => {
-    if (navigator) {
-      await navigator.share({
-        title: `${brand}`,
-        text: `${name} - ${brand}`,
-      });
+    const shareData = {
+      title: name,
+      text: brand,
+    };
+    //https://wa.me/5511941515753
+    if (window) {
+      const text = encodeURIComponent(`${shareData.text} - ${shareData.title}`);
+      const whatsappUrl = `https://wa.me/5511941515753/?text=${text}`;
+      window.open(whatsappUrl, '_blank');
     }
   };
   return (
