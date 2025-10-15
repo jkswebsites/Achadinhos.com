@@ -1,3 +1,4 @@
+import Banner from './_components/banner';
 import HeroCarousel from './_components/hero-carousel';
 import SheetProducts from './_components/sheet-products';
 import TitleContent from './_components/title-content';
@@ -14,7 +15,24 @@ export default function Home() {
         <TitleContent title="Achadinhos" subtitle="da semana" />
 
         <div className="mt-2">
-          <SheetProducts />
+          <SheetProducts catalogProducts={catalogProducts} />
+        </div>
+      </div>
+
+      <div className="my-6">
+        <Banner
+          title={catalogProducts[0].name}
+          subtitle={catalogProducts[0].brand}
+          img={catalogProducts[0].img[0]}
+          link={catalogProducts[0].slug}
+        />
+      </div>
+
+      <div className="mt-3">
+        <TitleContent title="Achadinhos" subtitle="da semana" />
+
+        <div className="mt-2">
+          <SheetProducts catalogProducts={catalogProducts} />
         </div>
       </div>
     </div>

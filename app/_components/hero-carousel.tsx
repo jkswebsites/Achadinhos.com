@@ -31,7 +31,7 @@ const HeroCarousel = ({ catalogProducts }: CatalogProductsPorps) => {
             className="h-[150px] ml-2 flex items-center justify-between rounded-lg shadow-lg bg-neutral-200"
           >
             <Image
-              src={item.img}
+              src={item.img[0]}
               alt={item.name}
               height={120}
               width={120}

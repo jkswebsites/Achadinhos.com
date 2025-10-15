@@ -18,7 +18,7 @@ export default function CatalogPage({ params }: CatalogPageProps) {
 
   return (
     <div className="p-6">
-      <ShowImage img={product.img} title={product.name} />
+      <ShowImage images={product.img} title={product.name} />
 
       <div>
         <h2 className="text-2xl font-bold font-subtitle">{product.name}</h2>

@@ -7,12 +7,12 @@ import { CatalogProducts } from '../constants/catalog-products';
 export default function ButtonShare({ name, brand }: CatalogProducts) {
   const handleShareClick = async () => {
     const shareData = {
-      title: name,
-      text: brand,
+      title: 'Vim pelo site achadinhos.com',
+      text: `${brand} - ${name}`,
     };
-    //https://wa.me/5511941515753
+
     if (window) {
-      const text = encodeURIComponent(`${shareData.text} - ${shareData.title}`);
+      const text = encodeURIComponent(`${shareData.title} - ${shareData.text}`);
       const whatsappUrl = `https://wa.me/5511941515753/?text=${text}`;
       window.open(whatsappUrl, '_blank');
     }

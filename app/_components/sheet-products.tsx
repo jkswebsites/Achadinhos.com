@@ -4,21 +4,23 @@ import {
   CarouselItem,
 } from '@/components/ui/carousel';
 import React from 'react';
-import { catalogProducts } from '../constants/catalog-products';
+import { CatalogProducts } from '../constants/catalog-products';
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
-
-const SheetProducts = () => {
+interface SheetProductsProps {
+  catalogProducts: CatalogProducts[];
+}
+const SheetProducts = ({ catalogProducts }: SheetProductsProps) => {
   return (
     <Carousel>
       <CarouselContent className="h-[250px]">
         {catalogProducts.map((product) => (
           <CarouselItem key={product.slug} className="basis-[180px]">
             <div className="w-full h-[250px] p-2 bg-gray-200 rounded-lg shadow-lg">
-              <div className="h-[120px] flex justify-center items-center hover:scale-125 cursor-zoom-in">
+              <div className="h-[120px] flex justify-center items-center ">
                 <Image
-                  src={product.img}
+                  src={product.img[0]}
                   alt={product.name}
                   className="object-cover drop-shadow-2xl "
                   width={100}
