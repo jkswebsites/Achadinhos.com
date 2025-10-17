@@ -9,9 +9,14 @@ import imgAsad02 from '@/app/assets/images/perfumes/asad-lattafa-2-removebg-prev
 import imgAsad03 from '@/app/assets/images/perfumes/asad-lattafa-3.png';
 import imgAsad04 from '@/app/assets/images/perfumes/asad-lattafa-4.png';
 
+export interface Images {
+  src: StaticImageData;
+  size: 'sm' | 'md' | 'full';
+  small: string;
+}
 export interface CatalogProducts {
   name: string;
-  img: StaticImageData[];
+  images: Images[];
   price: number;
   brand: string;
   type: string;
@@ -19,14 +24,13 @@ export interface CatalogProducts {
   description: string;
   discountPercentage: number;
   slug: string;
-  styles: string;
 }
 
 export const catalogProducts: CatalogProducts[] = [
   {
     name: 'Camera de Segurança',
     brand: 'Panorama',
-    img: [imgLampada],
+    images: [{ src: imgLampada, size: 'sm', small: '' }],
     price: 59.99,
     discountPercentage: 0,
     type: 'eletronico',
@@ -34,12 +38,16 @@ export const catalogProducts: CatalogProducts[] = [
     description:
       'Camera de Segurança, com sensor de movimento e acompanhamento remoto',
     slug: '/camera-360-panorama',
-    styles: 'mt-3 scale-105 hover:scale-[1.5]',
   },
   {
     name: 'Perfume Lattafa Asad Zanzibar Limited 100ml',
     brand: 'Asad',
-    img: [imgAsad01, imgAsad02, imgAsad03, imgAsad04],
+    images: [
+      { src: imgAsad01, size: 'md', small: 'w-[80px]' },
+      { src: imgAsad02, size: 'sm', small: 'w-[40px]' },
+      { src: imgAsad03, size: 'full', small: 'h-full' },
+      { src: imgAsad04, size: 'full', small: 'h-full' },
+    ],
     price: 183.5,
     discountPercentage: 0,
     type: 'perfume',
@@ -65,11 +73,10 @@ Design moderno e sofisticado com detalhes dourados.
 Cruelty-free e vegano.
 Edição limitada que garante exclusividade.`,
     slug: '/perfume-lattafa-asad-zanzibar-limited',
-    styles: 'mt-3 scale-105 hover:scale-[1.5]',
   },
   {
     name: 'SmartWatch',
-    img: [imgSmartWatch],
+    images: [{ src: imgSmartWatch, size: 'sm', small: '' }],
     brand: 'Panorama',
     price: 199.99,
     discountPercentage: 0,
@@ -77,12 +84,11 @@ Edição limitada que garante exclusividade.`,
     category: 'smartWatch',
     description: 'SmartWatch com monitoramento cardiaco',
     slug: '/smartwatch',
-    styles: 'mt-[50px] scale-150 hover:scale-[1.8]',
   },
   {
     name: 'Base Boca Rosa',
     brand: 'Boca Rosa',
-    img: [imgBoca],
+    images: [{ src: imgBoca, size: 'sm', small: '' }],
     price: 39.99,
     discountPercentage: 0,
     type: 'makeup',
@@ -94,13 +100,12 @@ Edição limitada que garante exclusividade.`,
   {
     name: 'Amolador de Facas',
     brand: 'Panorama',
-    img: [imgKnife],
+    images: [{ src: imgKnife, size: 'sm', small: '' }],
     price: 15.99,
     discountPercentage: 0,
     type: 'kitchen',
     category: 'amolador-de-facas',
     description: 'SmartWatch com monitoramento cardiaco',
     slug: '/amolador-faca',
-    styles: 'mt-[70px] scale-150 hover:scale-[1.8]',
   },
 ];

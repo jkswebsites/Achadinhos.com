@@ -23,7 +23,7 @@ export default function Home() {
         <Banner
           title={catalogProducts[0].name}
           subtitle={catalogProducts[0].brand}
-          img={catalogProducts[0].img[0]}
+          img={catalogProducts[0].images[0].src}
           link={catalogProducts[0].slug}
         />
       </div>

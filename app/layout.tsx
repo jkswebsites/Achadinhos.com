@@ -34,7 +34,7 @@ export default function RootLayout({
         className={`${roboto.variable} ${oxygen.variable} ${poppins.variable} antialiased`}
       >
         <Header />
-        <div className="mt-[100px] sm:w-[650px]">{children}</div>
+        <div className="mt-[45px] sm:w-[650px]">{children}</div>
       </body>
     </html>
   );

@@ -17,8 +17,8 @@ export default function CatalogPage({ params }: CatalogPageProps) {
   if (!product) return notFound();
 
   return (
-    <div className="p-6">
-      <ShowImage images={product.img} title={product.name} />
+    <div className="px-2">
+      <ShowImage images={product.images} title={product.name} />
 
       <div>
         <h2 className="text-2xl font-bold font-subtitle">{product.name}</h2>
@@ -26,10 +26,13 @@ export default function CatalogPage({ params }: CatalogPageProps) {
         <span className="text-2xl font-subtitle text-neutral-700 block w-[200px] my-3">
           {product.price}
         </span>
-        <p className="mt-4 italic text-neutral-500 tracking-wide">
-          {product.description}
-        </p>
         <ButtonShare {...product} />
+        <div>
+          <h6 className="text-lg text-neutral-500 font-semibold">Descrição</h6>
+          <p className="mt-1 italic text-neutral-500 tracking-wide">
+            {product.description}
+          </p>
+        </div>
       </div>
     </div>
   );

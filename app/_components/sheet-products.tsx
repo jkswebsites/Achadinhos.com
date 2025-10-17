@@ -20,7 +20,7 @@ const SheetProducts = ({ catalogProducts }: SheetProductsProps) => {
             <div className="w-full h-[250px] p-2 bg-gray-200 rounded-lg shadow-lg">
               <div className="h-[120px] flex justify-center items-center ">
                 <Image
-                  src={product.img[0]}
+                  src={product.images[0].src}
                   alt={product.name}
                   className="object-cover drop-shadow-2xl "
                   width={100}
