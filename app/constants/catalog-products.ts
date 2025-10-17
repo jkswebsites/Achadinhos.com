@@ -95,7 +95,6 @@ Edição limitada que garante exclusividade.`,
     category: 'base',
     description: 'SmartWatch com monitoramento cardiaco',
     slug: '/base-boca-rosa',
-    styles: 'mt-[40px] scale-150 hover:scale-[1.8]',
   },
   {
     name: 'Amolador de Facas',
