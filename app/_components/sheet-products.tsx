@@ -37,7 +37,7 @@ const SheetProducts = ({ catalogProducts }: SheetProductsProps) => {
                 </h3>
               </div>
               <Button className="w-[90%] mx-auto mt-3" asChild>
-                <Link href={`/pages/catalog/${product.slug}`}>+ Detalhes</Link>
+                <Link href={`/pages/details/${product.slug}`}>+ Detalhes</Link>
               </Button>
             </div>
           </CarouselItem>

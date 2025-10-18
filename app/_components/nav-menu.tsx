@@ -19,11 +19,7 @@ const navmenu = tv({
     breakpoints: 'vertical',
   },
 });
-const options = [
-  { name: 'Home', path: '/' },
-  { name: 'Celular', path: '/cellphones' },
-  { name: 'Maquiagem', path: '/maquiagem' },
-];
+const options = [{ name: 'Home', path: '/' }];
 
 export const OptionsMenus = ({ breakpoints = 'vertical' }: OptionsMenus) => {
   const pathname = usePathname();

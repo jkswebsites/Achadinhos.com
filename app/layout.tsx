@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { Roboto, Oxygen, Poppins } from 'next/font/google';
 import './globals.css';
 import Header from './_components/header';
+import Footer from './_components/footer';
 
 const roboto = Roboto({
   subsets: ['latin'],
@@ -34,7 +35,8 @@ export default function RootLayout({
         className={`${roboto.variable} ${oxygen.variable} ${poppins.variable} antialiased`}
       >
         <Header />
-        <div className="mt-[45px] sm:w-[650px]">{children}</div>
+        <div className="my-[45px] sm:mx-auto sm:w-[650px]">{children}</div>
+        <Footer />
       </body>
     </html>
   );

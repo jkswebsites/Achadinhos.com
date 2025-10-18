@@ -13,6 +13,7 @@ export interface Images {
   src: StaticImageData;
   size: 'sm' | 'md' | 'full';
   small: string;
+  banner?: string;
 }
 export interface CatalogProducts {
   name: string;
@@ -30,7 +31,14 @@ export const catalogProducts: CatalogProducts[] = [
   {
     name: 'Camera de Segurança',
     brand: 'Panorama',
-    images: [{ src: imgLampada, size: 'sm', small: '' }],
+    images: [
+      {
+        src: imgLampada,
+        size: 'md',
+        small: 'w-[60px]',
+        banner: 'sm:w-[150px]  sm:top-5 sm:right-[150px] top-8 right-[40px]',
+      },
+    ],
     price: 59.99,
     discountPercentage: 0,
     type: 'eletronico',
@@ -40,13 +48,19 @@ export const catalogProducts: CatalogProducts[] = [
     slug: '/camera-360-panorama',
   },
   {
-    name: 'Perfume Lattafa Asad Zanzibar Limited 100ml',
+    name: 'Lattafa Asad Zanzibar Limited 100ml',
     brand: 'Asad',
     images: [
-      { src: imgAsad01, size: 'md', small: 'w-[80px]' },
-      { src: imgAsad02, size: 'sm', small: 'w-[40px]' },
-      { src: imgAsad03, size: 'full', small: 'h-full' },
-      { src: imgAsad04, size: 'full', small: 'h-full' },
+      {
+        src: imgAsad01,
+        size: 'md',
+        small: 'w-[80px]',
+        banner:
+          'sm:w-[200px] sm:top-10 top-[70px] w-[300px] right-[20px] sm:right-[100px] ',
+      },
+      { src: imgAsad02, size: 'sm', small: 'w-[32px]' },
+      { src: imgAsad03, size: 'full', small: 'h-full w-full' },
+      { src: imgAsad04, size: 'full', small: 'h-full w-full' },
     ],
     price: 183.5,
     discountPercentage: 0,
@@ -76,7 +90,15 @@ Edição limitada que garante exclusividade.`,
   },
   {
     name: 'SmartWatch',
-    images: [{ src: imgSmartWatch, size: 'sm', small: '' }],
+    images: [
+      {
+        src: imgSmartWatch,
+        size: 'md',
+        small: '',
+        banner:
+          'sm:w-[200px] sm:top-16 top-20 w-[200px] sm:right-[100px] right-[40px]',
+      },
+    ],
     brand: 'Panorama',
     price: 199.99,
     discountPercentage: 0,
@@ -88,7 +110,14 @@ Edição limitada que garante exclusividade.`,
   {
     name: 'Base Boca Rosa',
     brand: 'Boca Rosa',
-    images: [{ src: imgBoca, size: 'sm', small: '' }],
+    images: [
+      {
+        src: imgBoca,
+        size: 'sm',
+        small: '',
+        banner: 'sm:w-[250px] sm:top-5 top-[80px] sm:right-[60px] right-[35px]',
+      },
+    ],
     price: 39.99,
     discountPercentage: 0,
     type: 'makeup',
@@ -99,7 +128,15 @@ Edição limitada que garante exclusividade.`,
   {
     name: 'Amolador de Facas',
     brand: 'Panorama',
-    images: [{ src: imgKnife, size: 'sm', small: '' }],
+    images: [
+      {
+        src: imgKnife,
+        size: 'full',
+        small: 'w-[150px]',
+        banner:
+          'sm:w-[400px] w-[200px] h-[80px] sm:top-[120px] top-[140px] sm:right-[60px] right-[30px]',
+      },
+    ],
     price: 15.99,
     discountPercentage: 0,
     type: 'kitchen',

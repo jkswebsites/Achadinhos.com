@@ -33,30 +33,26 @@ const ShowImage = ({ images, title }: ShowImageProps) => {
   };
   return (
     <div className="flex flex-col gap-y-6">
-      <div className="w-[90%] mx-auto h-[400px] md:w-[450px] flex items-center justify-center">
+      <div className="w-[90%] mb-14 mx-auto h-[400px] md:w-[450px] flex items-center justify-center">
         <Image
           src={image.src}
           alt={title}
-          width={50}
-          height={50}
           quality={100}
           className={settingImage({ size: image.size })}
         />
       </div>
 
-      <div className=" overflow-auto my-4">
-        <div className="flex  gap-2">
+      <div className="my-4 mx-auto w-[95%]">
+        <div className="flex gap-2 overflow-auto ">
           {images.map((_image, index) => (
             <div
               key={index}
-              className={`${_image.src === image.src ? 'border-blue-700' : 'border-neutral-400'} border overflow-hidden w-[100px] h-[100px]  rounded-lg bg-neutral-200 flex justify-center items-center`}
+              className={`${_image.src === image.src ? 'border-blue-700' : 'border-neutral-400'} border w-[100px] h-[100px]  rounded-lg bg-neutral-200 flex justify-center items-center overflow-hidden`}
             >
               <Image
                 onClick={() => handleClickChangeImage(_image)}
                 src={_image.src}
                 alt={title}
-                width={70}
-                height={70}
                 quality={100}
                 className={`${_image.small} drop-shadow-2xl hover:scale-110 cursor-zoom-in h-[80px] w-[80px]`}
               />
