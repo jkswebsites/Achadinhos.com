@@ -35,7 +35,7 @@ export default function RootLayout({
         className={`${roboto.variable} ${oxygen.variable} ${poppins.variable} antialiased`}
       >
         <Header />
-        <div className="my-[45px] sm:mx-auto sm:w-[650px]">{children}</div>
+        <div className="my-[45px] sm:mx-auto">{children}</div>
         <Footer />
       </body>
     </html>

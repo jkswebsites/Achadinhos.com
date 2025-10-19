@@ -18,7 +18,7 @@ export default function ButtonShare({ name, brand }: CatalogProducts) {
     }
   };
   return (
-    <Button className="my-3 w-[90%]" onClick={handleShareClick}>
+    <Button className="my-3 w-[90%] lg:w-[200px]" onClick={handleShareClick}>
       <FaWhatsapp />
       Comprar
     </Button>

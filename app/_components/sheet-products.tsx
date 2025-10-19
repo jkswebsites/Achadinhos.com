@@ -14,31 +14,33 @@ interface SheetProductsProps {
 const SheetProducts = ({ catalogProducts }: SheetProductsProps) => {
   return (
     <Carousel>
-      <CarouselContent className="h-[250px]">
+      <CarouselContent className="h-fit">
         {catalogProducts.map((product) => (
-          <CarouselItem key={product.slug} className="basis-[180px]">
-            <div className="w-full h-[250px] p-2 bg-gray-200 rounded-lg shadow-lg">
-              <div className="h-[120px] flex justify-center items-center ">
+          <CarouselItem key={product.slug} className="basis-[250px] h-fit py-2">
+            <div className="w-full h-[350px] p-2 bg-neutral-300 rounded-lg shadow-lg flex items-center justify-around flex-col">
+              <div className="h-[180px] w-full flex justify-center items-center ">
                 <Image
                   src={product.images[0].src}
                   alt={product.name}
-                  className="object-cover drop-shadow-2xl "
-                  width={100}
+                  className="object-cover drop-shadow-2xl w-[150px]"
                   quality={100}
                 />
               </div>
 
-              <div className="mt-2">
+              <div className="mt-2 w-4/5 mx-auto">
                 <h2 className="truncate font-semibold font-subtitle">
                   {product.name}
                 </h2>
                 <h3 className="text-neutral-500 -mt-2 italic">
                   {product.brand}
                 </h3>
+
+                <Button className="w-[90%] mx-auto mt-3" asChild>
+                  <Link href={`/pages/details/${product.slug}`}>
+                    + Detalhes
+                  </Link>
+                </Button>
               </div>
-              <Button className="w-[90%] mx-auto mt-3" asChild>
-                <Link href={`/pages/details/${product.slug}`}>+ Detalhes</Link>
-              </Button>
             </div>
           </CarouselItem>
         ))}

@@ -134,7 +134,7 @@ Edição limitada que garante exclusividade.`,
         size: 'full',
         small: 'w-[150px]',
         banner:
-          'sm:w-[400px] w-[200px] h-[80px] sm:top-[120px] top-[140px] sm:right-[60px] right-[30px]',
+          'sm:w-[450px] w-[200px] sm:h-[150px] h-[80px] sm:top-[90px] top-[140px] sm:right-[60px] right-[30px]',
       },
     ],
     price: 15.99,

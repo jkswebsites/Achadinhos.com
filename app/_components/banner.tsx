@@ -11,7 +11,7 @@ interface BannerProps {
 }
 const Banner = ({ title, subtitle, img, link }: BannerProps) => {
   return (
-    <div className="w-[95%] overflow-hidden flex items-center gap-4 px-5 rounded-lg shadow-2xl ml-4 h-[200px] bg-neutral-900">
+    <div className="w-[95%] lg:w-[950px] overflow-hidden flex items-center gap-4 px-5 rounded-lg shadow-2xl ml-4 h-[200px] bg-neutral-900">
       <div className="w-[40%] flex items-center justify-center">
         <Image
           src={img}

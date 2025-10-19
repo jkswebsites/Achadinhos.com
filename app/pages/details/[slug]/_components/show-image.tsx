@@ -32,8 +32,8 @@ const ShowImage = ({ images, title }: ShowImageProps) => {
     setImage({ src, size, small: '' });
   };
   return (
-    <div className="flex flex-col gap-y-6">
-      <div className="w-[90%] mb-14 mx-auto h-[400px] md:w-[450px] flex items-center justify-center">
+    <div className="flex flex-col lg:justify-between lg:flex-row gap-y-6">
+      <div className="w-[90%] mb-5 mx-auto h-[400px] md:w-[450px] flex items-center justify-center">
         <Image
           src={image.src}
           alt={title}
@@ -42,8 +42,8 @@ const ShowImage = ({ images, title }: ShowImageProps) => {
         />
       </div>
 
-      <div className="my-4 mx-auto w-[95%]">
-        <div className="flex gap-2 overflow-auto ">
+      <div className="my-4 mx-auto w-[95%] lg:w-fit">
+        <div className="flex gap-2 lg:flex-col overflow-auto ">
           {images.map((_image, index) => (
             <div
               key={index}

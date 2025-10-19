@@ -16,7 +16,7 @@ const BannerDetails = ({
 }: CatalogProducts) => {
   const t = false;
   return (
-    <div className="w-full overflow-hidden h-[280px] flex bg-gradient-to-l from-neutral-400 to-neutral-300 rounded-lg  shadow-lg shadow-neutral-400 mx-auto">
+    <div className="w-full  overflow-hidden h-[280px] flex bg-gradient-to-l from-neutral-400 to-neutral-300 rounded-lg  shadow-lg shadow-neutral-400">
       <div className="w-[60%] h-full py-3">
         <div className="h-[250px] flex items-center justify-center">
           <div className="w-4/6 mx-auto">

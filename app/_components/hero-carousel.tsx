@@ -21,10 +21,11 @@ const HeroCarousel = ({ catalogProducts }: CatalogProductsPorps) => {
           delay: 8000,
         }),
       ]}
+      className="lg:w-[1000px]"
     >
-      <CarouselContent className="p-3">
+      <CarouselContent className="p-3 ">
         {catalogProducts.map((item) => (
-          <CarouselItem key={item.slug} className="h-[270px] w-[95%]">
+          <CarouselItem key={item.slug} className="h-fit ">
             <BannerDetails {...item} />
           </CarouselItem>
         ))}
