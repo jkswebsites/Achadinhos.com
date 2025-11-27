@@ -62,7 +62,7 @@ export const catalogProducts: CatalogProducts[] = [
       { src: imgAsad03, size: 'full', small: 'h-full w-full' },
       { src: imgAsad04, size: 'full', small: 'h-full w-full' },
     ],
-    price: 183.5,
+    price: 399.99,
     discountPercentage: 0,
     type: 'perfume',
     category: 'beleza',
