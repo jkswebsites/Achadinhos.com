@@ -4,11 +4,17 @@ import React from 'react';
 import { FaWhatsapp } from 'react-icons/fa';
 import { CatalogProducts } from '../constants/catalog-products';
 
-export default function ButtonShare({ name, brand }: CatalogProducts) {
+export default function ButtonShare({
+  name,
+  brand,
+}: Pick<CatalogProducts, 'brand' | 'name'>) {
   const handleShareClick = async () => {
     const shareData = {
-      title: 'Vim pelo site achadinhos.com',
-      text: `${brand} - ${name}`,
+      title: 'Vim pelo catálogo digital!',
+      text: `
+        📝 ${brand} 
+        ​🚬​ ${name}
+      `,
     };
 
     if (window) {

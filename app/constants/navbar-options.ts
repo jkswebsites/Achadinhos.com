@@ -14,4 +14,10 @@ export const optionsMenu: OptionsMenu[] = [
     type: '',
     Icon: RiHome9Line,
   },
+  {
+    label: 'Tabacaria',
+    path: '/pages/tabacaria',
+    type: '',
+    Icon: RiHome9Line,
+  },
 ];
